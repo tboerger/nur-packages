@@ -1,4 +1,4 @@
-{ lib, stdenv }:
+{ stdenv }:
 
 stdenv.mkDerivation rec {
   name = "dummy-${version}";
@@ -8,12 +8,4 @@ stdenv.mkDerivation rec {
 
   buildPhase = "echo echo dummy > dummy";
   installPhase = "install -Dm755 dummy $out";
-
-  meta = with lib; {
-    description = "";
-    homepage = "";
-    license = licenses.mit;
-    maintainers = with maintainers; [ tboerger ];
-    platforms = platforms.unix;
-  };
 }
