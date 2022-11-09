@@ -40,22 +40,6 @@ mkYarnPackage rec {
         "$out/libexec/jellyseerr/deps/jellyseerr/dist/index.js"
   '';
 
-  # installPhase = ''
-  #   runHook preInstall
-  #   ls -ali *
-  #   cp -R deps/jellyseer/dist $out
-  #   runHook postInstall
-  # '';
-
-  # distPhase = ''
-  #   runHook preDist
-
-  #   makeWrapper ${nodejs}/bin/node $out/bin/jellyseerr \
-  #     --add-flags $out/share/jellyseerr/index.js
-
-  #   runHook postDist
-  # '';
-
   passthru.updateScript = ./update.sh;
 
   meta = with lib; {
