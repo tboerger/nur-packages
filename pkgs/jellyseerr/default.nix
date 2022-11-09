@@ -15,7 +15,7 @@ mkYarnPackage rec {
     owner = "Fallenbagel";
     repo = "jellyseerr";
     rev = "v${version}";
-    sha256 = "sha256-LL/iCol0ZPlAqVJaA7b+eifnUPQ7biG0wIXmJhASifk=";
+    sha256 = "sha256-TD+ctPyciG7VN71zcTX49rZCU+/NY2ahFPtd3tw8AWY=";
   };
 
   packageJSON = ./package.json;
